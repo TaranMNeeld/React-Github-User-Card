@@ -28,13 +28,23 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        {console.log(this.state.followers)}
         {<UserCard
+          key={this.state.user.id}
           imgUrl={this.state.user.avatar_url}
           name={this.state.user.name}
           username={this.state.user.login}
           bio={this.state.user.bio}
           profile={this.state.user.blog}
         />}
+        {this.state.followers.map(follower => {
+          return <UserCard
+          key={follower.id}
+          imgUrl={follower.avatar_url}
+          username={follower.login}
+          profile={follower.html_url}
+        />
+        })}
       </div>
     );
   }
