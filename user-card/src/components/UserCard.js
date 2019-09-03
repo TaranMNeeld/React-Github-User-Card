@@ -1,6 +1,6 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon, Image } from 'semantic-ui-react';
 
 const UserCard = props => {
     return (

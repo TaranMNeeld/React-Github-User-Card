@@ -16,7 +16,7 @@ class App extends React.Component {
     axios.get("https://api.github.com/users/taranmneeld")
       .then(res => this.setState({
         user: res.data
-      },))
+      }))
       .catch(err => console.log(err));
       axios.get("https://api.github.com/users/taranmneeld/followers")
       .then(res => this.setState({
